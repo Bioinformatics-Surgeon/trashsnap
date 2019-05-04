@@ -1,22 +1,29 @@
-# trashsnap
+# Create React Express App
 
-### User Stories:
+## About This Boilerplate
 
-- Sign up/in
+This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
 
-  1. user signs in
+The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
 
-  - directed to main portfolio or main camera
-  - if users has already sign in (session stoarage or local) they will just be direct straight to portfolio or the camera without having to sign in
+## Starting the app locally
 
-  2. user signs up
+Start by installing front and backend dependencies. While in this directory, run the following command:
 
-  - adds first and last name
-  - adds DOB
-  - city or optional address
-  - add a valid email that is validated
-  - make a unique username
-  - accepts terms
+```
+npm install
+```
 
-- Portfolio
-  1. User can
+This should install node modules within the server and the client folder.
+
+After both installations complete, run the following command in your terminal:
+
+```
+npm start
+```
+
+Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+
+## Deployment (Heroku)
+
+To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
