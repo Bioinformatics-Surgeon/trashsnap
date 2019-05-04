@@ -1,7 +1,7 @@
 {
-  "name": "mern",
-  "version": "1.0.0",
-  "description": "Mern Demo",
+  "name": "trashsnap",
+  "version": "0.0.1",
+  "description": "trashsnap",
   "main": "server.js",
   "homepage": "https://www.mudanic.com/trashsnap/",
   "repository": {
@@ -19,7 +19,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d /client/build"
   },
-  "author": "",
+  "author": "Cody Goss, Barry Rollan, Adam Garner, Jorge Uzcategui",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
