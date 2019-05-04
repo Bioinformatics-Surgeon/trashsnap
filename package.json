@@ -1,8 +1,13 @@
 {
-  "name": "mern",
-  "version": "1.0.0",
-  "description": "Mern Demo",
+  "name": "trashsnap",
+  "version": "0.0.1",
+  "description": "trashsnap",
   "main": "server.js",
+  "homepage": "https://www.mudanic.com/trashsnap/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bioinformatics-Surgeon/trashsnap.git"
+  },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
@@ -10,9 +15,11 @@
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
     "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "npm run build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d /client/build"
   },
-  "author": "",
+  "author": "Cody Goss, Barry Rollan, Adam Garner, Jorge Uzcategui",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.0",
@@ -20,6 +27,8 @@
   },
   "dependencies": {
     "express": "^4.16.3",
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "mongoose": "^5.5.5",
+    "gh-pages": "^2.0.1"
   }
 }
