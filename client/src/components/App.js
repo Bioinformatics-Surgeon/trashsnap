@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import MainMap from './Maps/MainMap';
 
 class App extends Component {
   constructor(props) {
@@ -36,25 +37,41 @@ class App extends Component {
 
   render() {
     return (
-      <div className='container'>
-        <ul className='nav'>
-          <li className='nav-item'>
-            <button className='btn-primary btn'>Button</button>
-          </li>
-          <li className='nav-item'>
-            <button
-              id='uploadButton'
-              className='btn btn-primary'
-              onClick={this.handleSubmit}
-            >
-              Upload files
-            </button>
-          </li>
-        </ul>
+      <div className='content'>
+        <div className='container'>
+          <div className='jumbotron d-flex justify-content-center h1'>
+            Trash Snap
+          </div>
 
-        <div className='row'>
-          <div className='col'>Col 1</div>
-          <div className='col'>Col 2</div>
+          <div className='row'>
+            <div className='col d-flex justify-content-center content'>
+              <MainMap />
+            </div>
+          </div>
+        </div>
+
+        <div className='card card-footer p-3 my-2 footer'>
+          <ul className='nav justify-content-center'>
+            <li className='nav-item center-link'>
+              <a className='nav-link p-0' href='#'>
+                Snaps
+              </a>
+            </li>
+            <li className='nav-item'>
+              <button
+                id='uploadButton'
+                className='btn btn-primary rounded-pill p-3 m-3'
+                onClick={this.handleSubmit}
+              >
+                Take a Snap
+              </button>
+            </li>
+            <li className='nav-item center-link'>
+              <a className='nav-link p-0' href='#'>
+                Friends
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
     );
