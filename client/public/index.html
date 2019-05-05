@@ -23,51 +23,9 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-
-    <!-- <button id="uploadButton" class="cloudinary-button btn-success">
-      Upload files
-    </button> -->
-
     <script
       src="https://widget.cloudinary.com/v2.0/global/all.js"
       type="text/javascript"
     ></script>
-
-    <!-- <script type="text/javascript">
-      setTimeout(function() {
-        document
-          .getElementById('uploadButton')
-          .addEventListener('click', function() {
-            const myUploadWidget = cloudinary.openUploadWidget(
-              {
-                cloudName: 'moodyappcloudname',
-                uploadPreset: 'lw2wvmbe',
-                defaultSource: 'camera'
-              },
-              (error, result) => {
-                const uploadedImage = result;
-                if (result.event === 'success') {
-                  console.log(result);
-                  // close widget
-                  myUploadWidget.close({ quiet: true });
-                } else {
-                }
-              },
-              false
-            );
-          });
-      }, 10);
-
-      let  = document.getElementById('demo');
-      function getLocation() {
-        let postition = navigator.geolocation.getCurrentPosition(showPosition);
-      }
-
-      getLocation();
-
-      function showPosition(position) {
-        console.log(position);
-      }
-    </script> -->
   </body>
 </html>
