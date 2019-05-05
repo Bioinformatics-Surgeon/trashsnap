@@ -11,7 +11,7 @@ class MainMap extends Component {
       activeMarker: {}, //Shows the active marker upon click
       selectedPlace: {}
     },
-    zoom: 12,
+    zoom: 11,
     points: [
       { lat: 39.91, lng: -75.2 },
       { lat: 39.86, lng: -75.1 },
@@ -51,7 +51,7 @@ class MainMap extends Component {
             lat: this.state.center.lat,
             lng: this.state.center.lng
           }}
-          zoom={this.props.zoom}
+          zoom={this.state.zoom}
           bounds={this.points}
           onClick={this.onMapClick}
         >

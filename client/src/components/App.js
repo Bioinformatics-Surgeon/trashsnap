@@ -40,7 +40,7 @@ class App extends Component {
       <div className='content'>
         <div className='container'>
           <div className='jumbotron d-flex justify-content-center h1'>
-            Trash Snap
+            Philly CleanUp
           </div>
 
           <div className='row'>
@@ -53,7 +53,11 @@ class App extends Component {
         <div className='card card-footer p-3 my-2 footer'>
           <ul className='nav justify-content-center'>
             <li className='nav-item center-link'>
-              <a className='nav-link p-0' href='#'>
+              <a
+                className='nav-link p-0'
+                href='https://www.google.com/search?q=trash+tag+reddit&source=lnms&tbm=isch&sa=X&ved=0ahUKEwi86OLY04TiAhWsdd8KHW4KBbMQ_AUIDygC&biw=1680&bih=868'
+                target='_blank'
+              >
                 Snaps
               </a>
             </li>
@@ -67,7 +71,11 @@ class App extends Component {
               </button>
             </li>
             <li className='nav-item center-link'>
-              <a className='nav-link p-0' href='#'>
+              <a
+                className='nav-link p-0'
+                href='https://www.reddit.com/r/TrashTag/'
+                target='_blank'
+              >
                 Friends
               </a>
             </li>
