@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
+import TrashMap from './components/TrashMap.js';
+
 
 class App extends Component {
   constructor(props) {
@@ -53,7 +55,8 @@ class App extends Component {
         </ul>
 
         <div className='row'>
-          <div className='col'>Col 1</div>
+          <div className='col'><TrashMap /></div>
+
           <div className='col'>Col 2</div>
         </div>
       </div>
