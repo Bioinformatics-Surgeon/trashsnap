@@ -29,7 +29,6 @@ class TrashMap extends Component {
                         lng: parseFloat(this.props.longitude)
                     }}
                     zoom={this.props.zoom}
-                    onClick={this.onMapClick}
                     >
                     <Marker
                         position={{lat: this.props.latitude, lng: this.props.longitude}}

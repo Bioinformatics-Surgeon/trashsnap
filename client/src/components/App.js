@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import TrashMap from './components/TrashMap.js';
+import TrashMap from './components/TrashMap';
 
 
 class App extends Component {
