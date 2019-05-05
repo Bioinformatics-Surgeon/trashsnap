@@ -1,24 +1,25 @@
 import React, { Component } from 'react';
-import { GoogleApiWrapper, Map, Marker, InfoWindow } from 'google-maps-react';
+import { GoogleApiWrapper, Marker } from 'google-maps-react';
+import Map from 'google-maps-react';
 
-class AtlantaMap extends Component {
+class MainMap extends Component {
   state = {
     center: {
-      lat: 33.77463,
-      lng: -84.36098,
+      lat: 39.958003,
+      lng: -75.196651,
       showingInfoWindow: false, //Hides or the shows the infoWindow
       activeMarker: {}, //Shows the active marker upon click
       selectedPlace: {}
     },
     zoom: 12,
     points: [
-      { lat: 42.02, lng: -77.01 },
-      { lat: 42.03, lng: -77.02 },
-      { lat: 41.03, lng: -77.04 },
-      { lat: 42.05, lng: -77.02 }
+      { lat: 39.91, lng: -75.2 },
+      { lat: 39.86, lng: -75.1 },
+      { lat: 39.77, lng: -75.0 },
+      { lat: 39.68, lng: -74.91 }
     ],
-    showInfoWindow: false,
-    restaurantList: []
+    pointArr: [],
+    showInfoWindow: true
   };
 
   // onMarkerClick = (props, marker, e) =>
@@ -41,28 +42,28 @@ class AtlantaMap extends Component {
     return (
       // Important! Always set the container height explicitly
       <div
-        style={{ height: '400px', width: '960px', position: 'relative' }}
+        style={{ height: '400px', width: '350px', position: 'relative' }}
         id='mapEmbed'
       >
         <Map
           google={this.props.google}
-          defaultCenter={this.props.center}
+          defaultCenter={this.state.center}
           center={{
-            lat: parseFloat(this.props.latitude),
-            lng: parseFloat(this.props.longitude)
+            lat: parseFloat(this.state.latitude),
+            lng: parseFloat(this.state.longitude)
           }}
           zoom={this.props.zoom}
           bounds={this.points}
           onClick={this.onMapClick}
         >
-          {this.props.restaurantList.map(restaurant => (
+          {this.state.pointArr.map(yuck => (
             <Marker
-              position={{ lat: restaurant.lat, lng: restaurant.lng }}
+              position={{ lat: yuck.lat, lng: yuck.lng }}
               onClick={this.onMarkerClick}
-              title={restaurant.name}
-              name={restaurant.name}
-              url={restaurant.url}
-              address={restaurant.address}
+              title={yuck.name}
+              name={yuck.name}
+              url={yuck.url}
+              address={yuck.address}
             >
               )}
             </Marker>
@@ -75,4 +76,4 @@ class AtlantaMap extends Component {
 
 export default GoogleApiWrapper({
   apiKey: 'AIzaSyDSI6lWAGiM5M4WzNSJB55KLUYzjwqX05k'
-})(AtlantaMap);
+})(MainMap);
