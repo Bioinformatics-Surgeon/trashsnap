@@ -47,10 +47,9 @@ class MainMap extends Component {
       >
         <Map
           google={this.props.google}
-          defaultCenter={this.state.center}
-          center={{
-            lat: parseFloat(this.state.latitude),
-            lng: parseFloat(this.state.longitude)
+          initialCenter={{
+            lat: this.state.center.lat,
+            lng: this.state.center.lng
           }}
           zoom={this.props.zoom}
           bounds={this.points}
