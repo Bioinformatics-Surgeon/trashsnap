@@ -22,12 +22,21 @@ class MainMap extends Component {
     showInfoWindow: true
   };
 
-  // onMarkerClick = (props, marker, e) =>
-  //   this.setState({
-  //     selectedPlace: props,
-  //     activeMarker: marker,
-  //     showingInfoWindow: true
-  //   });
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      showingInfoWindow: true
+    });
+
+    onClose = props => {
+      if (this.state.showingInfoWindow) {
+        this.setState ({
+          showingInfoWindow: false,
+          activeMarker: null
+        });
+      }
+    };
 
   // onMapClick = props => {
   //   if (this.state.showingInfoWindow) {
@@ -47,11 +56,7 @@ class MainMap extends Component {
       >
         <Map
           google={this.props.google}
-          defaultCenter={this.state.center}
-          center={{
-            lat: parseFloat(this.state.latitude),
-            lng: parseFloat(this.state.longitude)
-          }}
+          initialCenter={{ lat: this.state.center.lat, lng: this.state.center.lng }}
           zoom={this.props.zoom}
           bounds={this.points}
           onClick={this.onMapClick}
