@@ -18,7 +18,10 @@ class MainMap extends Component {
       { lat: 39.77, lng: -75.0 },
       { lat: 39.68, lng: -74.91 }
     ],
-    pointArr: [],
+    pointArr: [
+      { lat: 39.956, lng: -75.198 },
+      { lat: 39.951, lng: -75.18 }
+    ],
     showInfoWindow: true
   };
 
